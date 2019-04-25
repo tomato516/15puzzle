@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
+		<title>Fifteen Puzzle | Project</title>
+		<link
+			href="https://fonts.googleapis.com/css?family=Roboto"
+			rel="stylesheet"
+		/>
+
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+			integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
+			crossorigin="anonymous"
+		/>
+
+		<link rel="stylesheet" href="style.css" />
+	</head>
+	<!-- End of Game Notification | Animations | Game Time and Music | Mutliple Backgrounds -->
+	<body onload="randomImage()">
+		<div id="gameTime">
+			<time>00:00</time>
+		</div>
+
+		<div id="moves"></div>
+
+		<audio controls loop autoplay>
+			<source src="./audio/halloween.ogg" type="audio/ogg" />
+			<source src="./audio/halloween.mp3" type="audio/mpeg" />
+		</audio>
+
+		<div class="container">
+			<div class="heading">
+				<h1>Good Luck!</h1>
+				<hr />
+			</div>
+			<div class="menu">
+				<h2>Select an Image Below</h2>
+				<ul>
+					<li>
+						<button class="change-picture" onclick="toOtherImage('octocat')">
+							<i class="fab fa-github-alt"></i> Octocat
+						</button>
+					</li>
+					<li>
+						<button class="change-picture" onclick="toOtherImage('reddit')">
+							<i class="fab fa-reddit-alien"></i> Reddit
+						</button>
+					</li>
+					<li>
+						<button class="change-picture" onclick="toOtherImage('gsu')">
+							<i class="fas fa-graduation-cap"></i> GSU
+						</button>
+					</li>
+					<li>
+						<button class="change-picture" onclick="toOtherImage('stack')">
+							<i class="fab fa-stack-overflow"></i> Stack Overflow
+						</button>
+					</li>
+				</ul>
+			</div>
+
+			<div class="puzzle">
+				<button class="piece piece--1" style="--area: A">1</button>
+				<button class="piece piece--2" style="--area: B">2</button>
+				<button class="piece piece--3" style="--area: C">3</button>
+				<button class="piece piece--4" style="--area: D">4</button>
+				<button class="piece piece--5" style="--area: E">5</button>
+				<button class="piece piece--6" style="--area: F">6</button>
+				<button class="piece piece--7" style="--area: G">7</button>
+				<button class="piece piece--8" style="--area: H">8</button>
+				<button class="piece piece--9" style="--area: I">9</button>
+				<button class="piece piece--10" style="--area: J">10</button>
+				<button class="piece piece--11" style="--area: K">11</button>
+				<button class="piece piece--12" style="--area: L">12</button>
+				<button class="piece piece--13" style="--area: M">13</button>
+				<button class="piece piece--14" style="--area: N">14</button>
+				<button class="piece piece--15" style="--area: O">15</button>
+				<div class="piece piece--blank" style="--area : P"></div>
+			</div>
+			<button class="shuffle" onclick="shuffleBoard()">
+				<i class="fas fa-random"></i>
+			</button>
+
+			<div class="footer">
+				<h3>Play Smart, Play Quickly.</h3>
+			</div>
+		</div>
+
+		<script src="https://unpkg.com/animate-css-grid@latest"></script>
+		<script src="main.js"></script>
+	</body>
+</html>
